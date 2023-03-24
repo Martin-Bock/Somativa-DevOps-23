@@ -1,0 +1,12 @@
+node{
+    stage('build'){
+        bat 'python -V'
+    }
+    stage('test'){
+        git branch: 'main', url: 'https://github.com/Martin-Bock/Somativa-DevOps-23.git'
+        bat 'python hello.py'
+    }
+    stage('deploy'){
+        echo "Finished"
+    }
+}
